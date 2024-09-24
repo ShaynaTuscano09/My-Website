@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Shayna Tuscano Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+
+
+<style>
+
+/*======================================
+//--//-->   ABOUT
+======================================*/
+
+.about-mf .box-shadow-full {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.about-mf .about-img {
+  margin-bottom: 2rem;
+}
+
+.about-mf .about-img img {
+  margin-left: 10px;
+}
+
+
+.skill-mf .progress {
+  /* background-color: #cde1f8; */
+  margin: .5rem 0 1.2rem 0;
+  border-radius: 0;
+  height: .7rem;
+}
+
+.skill-mf .progress .progress-bar {
+  height: .7rem;
+  background-color: #ffbd39;
+}
+
+
+/* Animation styles */
+#typing-animation {
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(20, end) infinite;
+}
+
+#typing-animation:before {
+  content: "";
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #ccc;
+  animation: typing-cursor 0.5s ease-in-out infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing-cursor {
+  from {
+    width: 5px;
+  }
+  to {
+    width: 0;
+  }
+}
+
+
+/* project image zoom effect */
+
+.zoom-effect {
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
+}
+
+.zoom-effect:hover {
+  transform: scale(1.1);
+}
+
+
+</style>
+
+
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">Shayna Nicholas Tuscano</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Education</span></a></li>
+			  <li class="nav-item"><a href="#skills-section" class="nav-link"><span>Skills</span></a></li>
+	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Personal Projects</span></a></li>
+	         
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	  <section id="home-section" class="hero">
+		  <div class="home-slider  owl-carousel">
+	       <div class="slider-item ">
+	      	<div class="overlay"></div>
+	         <div class="container">
+	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+	          	<div class="one-third js-fullheight order-md-last img",id ="img" style="background-image:url(images/bg1.png);">
+	          	 <div class="overlay"></div>
+	          	</div>
+		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          	<div class="text">
+		          		<span class="subheading">Hello!</span>
+			            <h1 class="mb-4 mt-3">I'm <span>Shayna</span></h1>
+
+						<!-- Element to contain animated typing -->
+						<span id="typing-animation"></span>
+
+						<script>
+
+						// Initialize the typing animation
+						const typingAnimationElement = document.getElementById('typing-animation');
+
+						// Create an array of typing text
+						const typingTexts = [
+						'AI and Data Science Enthusiast'
+						];
+
+						// Create a function to display the typing animation for a given text
+						function playTypingAnimation(text) {
+						// Loop through each character and add it to the element
+						for (let i = 0; i < text.length; i++) {
+							setTimeout(() => {
+							typingAnimationElement.textContent += text[i];
+							}, i * 200); // Increase the delay to slow down the typing animation
+						}
+
+						// Once the animation is complete, reset the text and start over
+						setTimeout(() => {
+							typingAnimationElement.textContent = '';
+							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+						}, text.length * 200);
+						}
+
+						// Start the typing animation loop
+						playTypingAnimation(typingTexts[0]);
+
+						</script>
+
+						<br>
+						<br>
+						<br>
+						<br>
+			            
+		            </div>
+		          </div>
+	        	</div>
+	        </div>
+	      </div>
+		</div>
+    </section>
+
+
+
+    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+    	<div class="container">
+			<div class="row">
+				<div class="row d-flex align-items-stretch">
+				
+					<div class="col-md-6 col-lg-5 d-flex">
+						<div class="img-about img d-flex align-items-stretch">
+							<div class="overlay">
+								<div class="row">
+									<div class="col-sm-6 col-md-5">
+										<br>
+									  <div class="about-img">
+										
+										<img src="images/profile_photo.png" class="img-fluid rounded b-shadow-a" alt="">
+									  </div>
+									</div>
+									<!-- Details next to profile image -->
+									<div class="col-sm-6 col-md-7">
+									  <div class="about-info">
+										<br>
+										
+									
+									<br>
+									  </div>
+									</div>
+								  </div>
+
+								
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+						<div class="row justify-content-start pb-3">
+							<div class="col-md-12 heading-section ftco-animate">
+								
+								
+								<h2 class="mb-4">About Me</h2>
+								
+								<p><b>Hi there! I'm Shayna, your go-to data detective</b> 🕵️‍♀️🔍 <br>
+									
+			
+			I've got a knack for turning numbers into narratives. Think of me as a storyteller who uses data as their canvas. I'm fueled by the thrill of uncovering hidden insights and solving real-world problems using AI. <br>
+			
+			Sure, I spend my days crunching numbers and building models, but I'm also a firm believer in balance. When I'm not immersed in the world of data, you'll find me practicing yoga, exploring new cultures, or simply enjoying the simple pleasures of life. <br>
+			I have a strong foundation in Statistics, Machine Learning, Deep Learning, and NLP, and I am always excited to learn new things, especially in the field of Generative AI. <br>
+			
+			I'm excited to take the next step in my career and use my passion for data to make a positive impact. Let's work together to turn data into something truly extraordinary! <br>
+			<span class="title"><b>You can also find me on  </b></span>
+											
+								</p> 
+								
+								
+
+										<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+											 
+										<li class="ftco-animate"><a href="https://www.youtube.com/"><span class="icon-youtube"></span></a></li>
+										<li class="ftco-animate"><a href="https://www.linkedin.com/in/"><span class="icon-linkedin"></span></a></li>  
+										<li class="ftco-animate"><a href="https://www.linkedin.com/in/"><span class="icon-"><i class='bx bxl-github'></i></span></a></li>
+										<li class="ftco-animate"><a href="https://www.linkedin.com/in/"><span class="icon-"><i class='bx bxl-gmail'></i></span></a></li>
+										</ul>
+								
+							</div>
+						</div>
+
+
+						
+					</div>
+				</div>
+			</div>
+		</div>
+    </section>
+
+
+
+	
+    <section class="ftco-section ftco-no-pb" id="resume-section">
+    	<div class="container">
+    		<div class="row justify-content-center pb-5">
+          <div class="col-md-10 heading-section text-center ftco-animate">
+          	
+            <h2 class="mb-4">Education </h2>
+			
+            
+          </div>
+        </div>
+
+		
+		<br>
+		
+			<div class="row">
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2023-2024</span>
+    					<h2>MSc in Computer Science - Data Analytics</h2>
+    					<span class="position">University of Galway <br> Galway, Ireland</span>
+    					<p class="mt-4">Grade: 2:1</p>
+    				</div>
+    			</div>
+
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2018-2022</span>
+    					<h2>Bachelor of Engineering in Electronics</h2>
+    					<span class="position">Fr.Conceicao Rodrigues College of Engineering <br> Mumbai, India</span>
+    					<p class="mt-4">CGPI: 9.4 / 10</p>
+    				</div>
+				</div>
+    		</div>
+
+    		<div class="row justify-content-center mt-5">
+    			<div class="col-md-6 text-center ftco-animate">
+    				<p><a href="#" class="btn btn-primary py-4 px-5">Download CV</a></p>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+
+
+	<section class="ftco-section ftco-no-pb" id="skills-section">
+		<div class="container"></div>
+    		<div class="row justify-content-center pb-5">
+          <div class="col-md-10 heading-section text-center ftco-animate">
+          
+            <h2 class="mb-4">Skills </h2>
+			
+            <div class="skill-mf">
+				
+				<div class="row">
+					<div class="col-md-6">
+						<div class="resume-wrap ftco-animate">
+				<span>Programming Language</span> <div class="skill-box">
+				 <span ><img src="icons/java.png" alt="JAVA" class="skill-icon">
+					<img src="icons/r.png" alt="R" class="skill-icon">
+					<img src="icons/python.png" alt="PYTHON" class="skill-icon">
+					<img src="icons/c-.png" alt="C" class="skill-icon">
+				</span> 
+			</div>
+		</div>
+		
+				</div>
+				
+				
+					<div class="col-md-6">
+						<div class="resume-wrap ftco-animate">
+				<span>Web Development</span> <div class="skill-box">
+					<span ><img src="icons/html-5.png" alt="HTML" class="skill-icon">
+					   <img src="icons/css-3.png" alt="R" class="skill-icon">
+					   <img src="icons/java-script.png" alt="PYTHON" class="skill-icon">
+					  
+				   </span> 
+				   </div>
+				</div>
+			</div>
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+				   <span>Database Technologies</span> <div class="skill-box">
+					<span ><img src="icons/database (1).png" alt="JAVA" class="skill-icon">
+					   <img src="icons/postgresql.svg" alt="R" class="skill-icon">
+					   
+				   </span> 
+				   </div>
+				</div>
+				</div>
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+				   <span>Version Control</span> <div class="skill-box">
+					<span ><img src="icons/git.png" alt="JAVA" class="skill-icon">
+					   
+				   </span> 
+				   </div>
+				</div>
+				</div>
+				   <div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+				   <span>Data Visualization</span> <div class="skill-box">
+					<span ><img src="icons/tableau.png" alt="JAVA" class="skill-icon">
+	
+				   </span> 
+				</div>
+				</div>
+			</div>
+			</div>
+          </div>
+        </div>
+		
+	</div>
+
+	</section>
+
+	<section class="ftco-section ftco-no-pb" id="project-section">
+    	<div class="container">
+    		<div class="row justify-content-center pb-5">
+          <div class="col-md-10 heading-section text-center ftco-animate">
+          	
+            <h2 class="mb-4">Personal Projects </h2>
+
+            
+          </div>
+        </div>
+
+		
+		<br>
+		
+			<div class="row1">
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">Niki Sales Dashboard</span><br>			
+    					<span >Developed an interactive sales dashboard using Tableau to visualize key performance indicators (KPIs) for Niki's product sales. The dashboard features dynamic filters and insightful visualizations that track sales trends, customer behavior, and product performance, enabling stakeholders to make data-driven decisions effectively.</span>
+    					<div class="row justify-content-center mt-5">
+							<div class="col-md-6 text-center ftco-animate">
+								<p><a href="https://github.com/ShaynaTuscano09/Data-Visualization.git" class="btn btn-primary py-4 px-5">View</a></p>
+							</div>
+						</div>
+    				</div>
+    			</div>
+			</div>
+			<div class="row1">
+
+    			<div class="col-md-6"> 
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">Electronics Fromula Calculator</span><br>			
+    					<span >Created a user-friendly GUI application using Python and Tkinter that allows users to easily calculate essential electronics and electrical formulas, including Ohm's Law, capacitance, energy in capacitors, power, frequency, angular frequency, and time constants. This tool simplifies complex calculations, making it an invaluable resource for students and professionals in the field. </span> 
+    					<div class="row justify-content-center mt-5">
+							<div class="col-md-6 text-center ftco-animate">
+							
+								<p><a href="https://github.com/ShaynaTuscano09/Electronics_Formula_Calculator.git" class="btn btn-primary py-4 px-5">View</a></p>
+							</div>
+						</div>
+    				</div>
+    			</div>
+			</div>
+			<div class="row1">
+				<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">Statistical Analysis of Defect Detection in Manufactured Product</span><br>			
+    					<span >Created a project titled "Statistical Analysis of Defect Detection in Manufacturing Quality Control" to analyze defect occurrences in a manufacturing plant and optimize quality control processes. This project evaluated the effectiveness of various inspection methods in detecting defects of varying severity, successfully identifying patterns in defect types and their associated repair costs. Key methodologies employed included data cleaning and preparation, descriptive statistics, statistical hypothesis testing (such as ANOVA and Kruskal-Wallis tests). </span> 
+    					<div class="row justify-content-center mt-5">
+							<div class="col-md-6 text-center ftco-animate">
+							
+								<p><a href="https://github.com/ShaynaTuscano09/Manufacturing-Defects-Hypothethisis-Testing.git" class="btn btn-primary py-4 px-5">View</a></p>
+							</div>
+						</div>
+    				</div>
+    			</div>
+			</div>
+			<div class="row1">
+				<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">Heart Disease Prediction</span><br>			
+    					<span >Developed a predictive model leveraging machine learning algorithms to assess the likelihood of heart disease in patients based on various health indicators. Utilized data preprocessing, feature selection, and model evaluation techniques to achieve high accuracy, enabling healthcare professionals to identify at-risk individuals and promote early intervention.</span>
+    					<div class="row justify-content-center mt-5">
+							<div class="col-md-6 text-center ftco-animate">
+								<p><a href="https://github.com/ShaynaTuscano09/Heart_Disease_Prediction_ML_Project.git" class="btn btn-primary py-4 px-5">View</a></p>
+							</div>
+						</div>
+    				</div>
+
+    			</div>
+			</div>
+    		
+
+    		
+    	</div>
+    </section>
+
+   
+
+   
+   </div>
+ </section>
+
+
+ 
+	
+    <footer class="ftco-footer ftco-section">
+		<div class="container">
+		  <div class="row">
+			<div class="col-md-12 text-center">
+  
+			  <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+	Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+			</div>
+		  </div>
+		</div>
+	  </footer>
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>
